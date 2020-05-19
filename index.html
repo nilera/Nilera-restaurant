@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://lh3.googleusercontent.com/proxy/6TvFE4KP5ZcrnbYHNrph8kqmj9PgAI4rJ5IDtXbfxTVGNdcm5PGat0fIhtEmDkVtbBloy4iQuegpM4Ja1sC4BL8aOkj0p4SEYLiSlKoh2M_3vgaC4fs1kPq3q-CX-k0x4bqMo96Dvt2ZkHkQd4hR4Emug6D3ME82PzCZjHpGXRx_");
+}
+.second{
+  background-image: url("https://cucina.corriere.it/methode_image/2017/03/31/Cucina/Foto%20Trattate/2-kTNF-U43300575267699nEI-620x385@Cucina-Web.jpg?v=201703310948");
+}
+.dessert{
+  background-image: url("https://lavozdelmuro.net/wp-content/uploads/2020/01/cannolis.jpg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>nilera restaurant</h1>
+<h2>Roma, italia</h2>
+<div class="first">
+  <p> Fiori di zucca <span class="price">8€</span><br />
+  <small> Deliciosas flores de calabaza rebozadas en harina y coc¡nadas a fuego lento en una sartén con aceite para que queden suaves y crujientes </small></p>
+</div>
+
+<div class="second">
+  <p> Pasta al parmesano <span class="price">14€</span><br />
+  <small>Pasta condimentada con nata y rematada dentro de un queso parmesano para que esta coja todo su sabor</small></p>
+</div>
+  
+<div class="dessert">
+  <p> Cannolo siciliano <span class="price">2,50€</span><br />
+  <small>Típico dulce de la region italiana de Sicilia que consta de una deliciosa masa de galleta enrollada en forma de tubo rellena normalmente de ricota u otras cremas</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
